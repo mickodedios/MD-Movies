@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Movies - All Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-am"></div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation">
+        &#9776;
+    </div>
+
+   <!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" role="navigation" aria-hidden="true">
+    <button class="back-button" onclick="toggleMenu()" aria-label="Back"> &lt; </button>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AllMovies.html">All Movies</a></li>
+        <li><a href="Trending.html">Trending</a></li>
+        <li><a href="Watchlist.html">Watchlist</a></li>
+        <li>
+            <input type="search" id="mobile-search" placeholder="Search..." aria-label="Search Movies">
+            <button id="mobile-search-btn" type="button" onclick="searchMobile()">Search</button>
+        </li>
+    </ul>
+</nav>
+
+    <!-- Left Panel -->
+    <div class="left-panel">
+        <h1>MD MOVIES</h1>
+        <hr class="short-line">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Trending.html">Trending</a></li>
+                <li><a href="Watchlist.html">Watchlist</a></li>
+            </ul>
+        </nav>
+        <hr class="short-line">
+        <div class="user-btn-container">
+            <select id="users-btn" name="users">
+                <option value="Users">Users</option>
+                <option value="Add Users">mickodedios</option>
+            </select>
+        </div>
+        <p class="am-p">
+            <span style="color: yellow;">MD Movies</span> – Watch movies online for free! Enjoy a vast selection of films with no fees and no interruptions. Start streaming now and dive into endless entertainment today!
+        </p>
+        
+        <div class="socials">
+            <a href="https://www.facebook.com/mickodedios" target="_blank">www.facebook.com/mickodedios</a>
+            <a href="https://www.instagram.com/mickodedios" target="_blank">www.instagram.com/mickodedios</a>
+        </div>
+        <a href="about:blank" target="_blank">
+            <button id="logout-btn">Log Out</button>
+            </a>
+        <footer>
+            <p>Copyright © 2024 mdmovies. All rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="user-actions">
+            <input type="text" id="searchmain" placeholder="Search...">
+            <button id="search-btn">Search</button>
+            <input type="button" id="notification-btn" onclick="alert('You have no notification')" value="🔔">
+            <button id="sign-in-btn" onclick="signIn()">Sign In</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="movie-grid">
+            <h2 class="am-h2">All Movies</h2>
+            <div class="posters-grid">
+                
+                <a href="https://ww4.123moviesfree.net/movie/monster-house-14504/" target="_blank">
+                    <img src="mdpics/am/1.jpg" alt="Movie 1">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/pirates-of-the-caribbean-dead-mans-chest-1994/" target="_blank">
+                    <img src="mdpics/am/2.jpg" alt="Movie 2">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/avatar-4318/" target="_blank">
+                    <img src="mdpics/am/3.jpg" alt="Movie 3">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/thor-ragnarok-22466/" target="_blank">
+                    <img src="mdpics/am/4.jpg" alt="Movie 4">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/john-wick-1631/" target="_blank">
+                    <img src="mdpics/am/5.jpg" alt="Movie 5">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/jaws-4513/" target="_blank">
+                    <img src="mdpics/am/6.jpg" alt="Movie 6">
+                </a>
+                <a href="https://www.imdb.com/title/tt8408488/" target="_blank">
+                    <img src="mdpics/am/7.jpg" alt="Movie 7">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/dracula-the-original-living-vampire-1630852695/" target="_blank">
+                    <img src="mdpics/am/8.jpg" alt="Movie 8">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/bohemian-rhapsody-26747/" target="_blank">
+                    <img src="mdpics/am/9.jpg" alt="Movie 9">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/once-upon-a-time-in-hollywood-29085/" target="_blank">
+                    <img src="mdpics/am/10.jpg" alt="Movie 10">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/shutter-island-4469/" target="_blank">
+                    <img src="mdpics/am/11.jpg" alt="Movie 11">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/baby-driver-21303/" target="_blank">
+                    <img src="mdpics/am/12.jpg" alt="Movie 12">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/star-wars-episode-v-the-empire-strikes-back-2233/" target="_blank">
+                    <img src="mdpics/am/13.jpg" alt="Movie 13">
+                </a>
+                <a href="https://www.justwatch.com/au/movie/finding-nemo-3d" target="_blank">
+                    <img src="mdpics/am/14.jpg" alt="Movie 14">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/paper-towns-5218/" target="_blank">
+                    <img src="mdpics/am/15.jpg" alt="Movie 15">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/the-martian-5726/" target="_blank">
+                    <img src="mdpics/am/16.jpg" alt="Movie 16">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/jurassic-world-fallen-kingdom-25222/" target="_blank">
+                    <img src="mdpics/am/17.jpg" alt="Movie 17">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/the-fast-and-the-furious-tokyo-drift-1660/" target="_blank">
+                    <img src="mdpics/am/18.jpg" alt="Movie 18">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/babylon-1630854631/" target="_blank">
+                    <img src="mdpics/am/19.jpg" alt="Movie 19">
+                </a>
+                <a href="https://www.amazon.com/Andy-Muschietti/dp/B0756TJK1P" target="_blank">
+                    <img src="mdpics/am/20.jpg" alt="Movie 20">
+                </a>
+            </div>
+            
+
+            <div class="see-more">
+                <a href="https://ww4.123moviesfree.net/movies/" target="_blank">See more -></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function signIn() {
+            const username = prompt("Enter your username:");
+            const password = prompt("Enter your password:");
+
+            if (username && password) {
+                alert(`Welcome, ${username}!`);
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        function toggleMenu() {
+            const mobileNav = document.getElementById("mobile-nav");
+            const isVisible = mobileNav.style.display === "block";
+            mobileNav.style.display = isVisible ? "none" : "block";
+            mobileNav.setAttribute("aria-hidden", isVisible); 
+        }
+
+        function searchMobile() {
+    const searchQuery = document.getElementById('mobile-search').value;
+    if (searchQuery) {
+        alert(`Searching for: ${searchQuery}`); 
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blur"></div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation">
+        &#9776;
+    </div>
+
+   <!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" role="navigation" aria-hidden="true">
+    <button class="back-button" onclick="toggleMenu()" aria-label="Back"> &lt; </button>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AllMovies.html">All Movies</a></li>
+        <li><a href="Trending.html">Trending</a></li>
+        <li><a href="Watchlist.html">Watchlist</a></li>
+        <li>
+            <input type="search" id="mobile-search" placeholder="Search..." aria-label="Search Movies">
+            <button id="mobile-search-btn" type="button" onclick="searchMobile()">Search</button>
+        </li>
+    </ul>
+</nav>
+
+
+    <!-- Left Panel -->
+    <div class="left-panel">
+        <h1>MD MOVIES</h1>
+        <hr class="short-line">
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="AllMovies.html">All Movies</a></li>
+                <li><a href="Trending.html">Trending</a></li>
+                <li><a href="Watchlist.html">Watchlist</a></li>
+            </ul>
+        </nav>
+        <hr class="short-line">
+        <div class="user-btn-container">
+            <select id="users-btn" class="users-btn" name="users">
+                <option value="Users">Users</option>
+                <option value="Add Users">mickodedios</option> 
+            </select>
+        </div>
+        <p>
+            Welcome to <span style="color: yellow;">MD Movies</span> – your go-to site for free movies! Enjoy a wide range of <span style="color: skyblue;">films, from blockbusters to classics</span>, with no fees or subscriptions. Start watching now!            
+        </p>
+        <div class="socials">
+            <a href="https://www.facebook.com/mickodedios" target="_blank">www.facebook.com/mickodedios</a>
+            <a href="https://www.instagram.com/mickodedios" target="_blank">www.instagram.com/mickodedios</a>
+        </div>
+        <button id="logout-btn" onclick="window.location.href='about:blank'" aria-label="Log Out">Log Out</button>
+        <footer>
+            <p>Copyright © 2024 mdmovies. All rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="user-actions">
+            <input type="search" id="searchmain" placeholder="Search..." aria-label="Search Movies">
+            <button id="search-btn" type="button">Search</button>
+            <input type="button" id="notification-btn" onclick="alert('You have no notification')" value="🔔" aria-label="Notifications">
+            <button id="sign-in-btn" onclick="signIn()" aria-label="Sign In">Sign In</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="preview">
+            <img src="mdpics/openheimer.jpg" alt="Featured Movie: Oppenheimer">
+        </section>
+
+        <section class="suggestions">
+            <h2 class="sug-home">Suggestions</h2>
+            <div class="posters-grid">
+                <a href="https://ww4.123moviesfree.net/movie/deadpool-wolverine-1630857355/" target="_blank" aria-label="Watch Deadpool vs Wolverine">
+                    <img src="mdpics/deadpool vs wolverine.jpg" alt="Deadpool vs Wolverine">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/the-fall-guy-1630856966/" target="_blank" aria-label="Watch Fall Guy">
+                    <img src="mdpics/fall guy.jpg" alt="Fall Guy">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/challengers-1630856964/" target="_blank" aria-label="Watch Challengers">
+                    <img src="mdpics/challengers.jpg" alt="Challengers">
+                </a>
+                <a href="https://ww4.123moviesfree.net/movie/alien-romulus-1630857469/" target="_blank" aria-label="Watch Alien">
+                    <img src="mdpics/alien romulus.jpg" alt="Alien Romulus">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function signIn() {
+            const username = prompt("Enter your username:");
+            const password = prompt("Enter your password:");
+
+            if (username && password) {
+                alert(`Welcome, ${username}!`); 
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        function toggleMenu() {
+            const mobileNav = document.getElementById("mobile-nav");
+            const isVisible = mobileNav.style.display === "block";
+            mobileNav.style.display = isVisible ? "none" : "block"; 
+            mobileNav.setAttribute("aria-hidden", isVisible); 
+        }
+
+        function searchMobile() {
+    const searchQuery = document.getElementById('mobile-search').value;
+    if (searchQuery) {
+        alert(`Searching for: ${searchQuery}`); 
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+    </script>
+
+</body>
+</html>
